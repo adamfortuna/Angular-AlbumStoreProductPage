@@ -1,3 +1,11 @@
-<ul>
-  <li *ngFor='let product of products'><a routerLink="/product/{{product.id}}" routerLinkActive="active">{{product.albumName}}</a></li>
+<h2>Pick an Album!</h2>
+    
+<ul clas="list-unstyled">
+  <li *ngFor='let product of products'>
+    <a routerLink="/product/{{product.id}}" routerLinkActive="active">
+      <b>{{product.albumName}}</b>
+      by 
+      {{product.artistName}}
+    </a>
+  </li>
 </ul>
